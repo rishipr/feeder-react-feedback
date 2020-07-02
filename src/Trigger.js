@@ -26,6 +26,7 @@ class Trigger extends Component {
           style={{
             background: props.primaryColor,
             color: props.textColor,
+            zIndex: parseInt(props.zIndex),
           }}
           onClick={this.triggerModal}
         >
@@ -63,6 +64,7 @@ class Trigger extends Component {
                 submitButtonMsg={props.submitButtonMsg}
                 triggerModal={this.triggerModal}
                 modalOpen={this.state.modal}
+                zIndex={props.zIndex}
               />
             </CSSTransition>
           )}

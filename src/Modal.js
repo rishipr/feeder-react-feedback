@@ -115,7 +115,11 @@ class Modal extends Component {
 
     return (
       <StyleRoot>
-        <form className="frf-modal-container" onSubmit={this.handleSubmit}>
+        <form
+          className="frf-modal-container"
+          style={{ zIndex: parseInt(props.zIndex) }}
+          onSubmit={this.handleSubmit}
+        >
           <div className="frf-modal-content-container">
             {props.email && (
               <div className="frf-modal-input-group">

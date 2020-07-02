@@ -9,7 +9,10 @@ class Feedback extends Component {
     let { props } = this;
 
     return (
-      <div className="frf-feedback-container">
+      <div
+        className="frf-feedback-container"
+        style={{ zIndex: parseInt(props.zIndex) }}
+      >
         <Trigger
           email={props.email}
           emailRequired={props.emailRequired}
@@ -23,6 +26,7 @@ class Feedback extends Component {
           hoverBorderColor={props.hoverBorderColor}
           postSubmitButtonMsg={props.postSubmitButtonMsg}
           submitButtonMsg={props.submitButtonMsg}
+          zIndex={props.zIndex}
         />
       </div>
     );
@@ -41,6 +45,7 @@ Feedback.propTypes = {
   postSubmitButtonMsg: PropTypes.string,
   submitButtonMsg: PropTypes.string,
   subProject: PropTypes.string,
+  zIndex: PropTypes.string,
   feedbackTypes: PropTypes.arrayOf(PropTypes.string),
 };
 
@@ -56,6 +61,7 @@ Feedback.defaultProps = {
   postSubmitButtonMsg: "Thanks!",
   submitButtonMsg: "Send Feedback",
   feedbackTypes: ["general", "bug", "idea"],
+  zIndex: "100000000",
 };
 
 export default Feedback;
