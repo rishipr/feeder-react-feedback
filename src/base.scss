@@ -1,0 +1,16 @@
+// Base colors
+$black: #000000;
+$white: #ffffff;
+$primaryGray: #6e7898;
+$lightGray: rgba($primaryGray, 0.6);
+$primaryBlue: rgb(0, 93, 255);
+$primaryRed: #da223d;
+
+// Mixins
+@mixin transition {
+  transition: all 0.25s ease 0s;
+}
+
+@mixin shadow {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}

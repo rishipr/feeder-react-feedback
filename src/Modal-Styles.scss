@@ -1,0 +1,153 @@
+@import "./base.scss";
+
+::placeholder,
+:-ms-input-placeholder {
+  color: $lightGray;
+}
+
+.frf-modal-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  position: absolute;
+  right: 12px;
+  bottom: 108px;
+  background: $white;
+  @include shadow;
+  max-width: 380px;
+  width: 80%;
+  max-height: 70vh;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow: scroll;
+  border-radius: 4px;
+  font-size: 16px;
+  z-index: 10;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.frf-modal-first-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  border-radius: 4px 4px 0px 0px;
+  border-bottom: 1px solid rgba($lightGray, 0.15);
+
+  .frf-modal-title {
+    font-weight: 500;
+  }
+
+  .frf-modal-close {
+    font-size: 14px;
+    cursor: pointer;
+  }
+}
+
+.frf-modal-content-container {
+  padding: 24px;
+}
+
+.frf-modal-input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.frf-modal-label {
+  color: $lightGray;
+  padding-bottom: 8px;
+  font-size: 14px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+textarea {
+  min-height: 140px;
+}
+
+.frf-modal-input {
+  padding: 12px 20px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  border: 1px solid rgba($lightGray, 0.15);
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  outline: none;
+  width: 100%;
+  font-weight: 500;
+
+  &::placeholder {
+    color: $lightGray;
+    font-weight: 500;
+  }
+}
+
+.frf-modal-feedback-types {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+
+  .frf-modal-feedback-type {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+    max-width: 100/3;
+
+    padding: 12px;
+    text-align: center;
+    border: 1px solid rgba($lightGray, 0.15);
+    cursor: pointer;
+
+    &:first-of-type {
+      border-radius: 4px 0px 0px 4px;
+    }
+
+    &:last-of-type {
+      border-radius: 0px 4px 4px 0px;
+    }
+  }
+}
+
+.frf-modal-button {
+  padding: 16px 30px 16px;
+  outline: 0;
+  border-radius: 4px;
+  border: 1px solid rgba($lightGray, 0.15);
+  margin-top: 16px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 500;
+
+  .frf-modal-button-loader {
+    display: inline-block;
+    border: 0.133 * 16px solid $lightGray;
+    border-radius: 16px;
+    width: 16px;
+    height: 16px;
+    animation: spin 0.5s linear infinite;
+  }
+}
+
+@media (max-width: 300px) {
+  .frf-modal-feedback-types {
+    flex-wrap: wrap;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
