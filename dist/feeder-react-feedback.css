@@ -1,7 +1,329 @@
 @import url(https://rsms.me/inter/inter.css);
-.frf-feedback-container{position:fixed;width:100%;bottom:0;right:24px}.frf-feedback-container *,.frf-feedback-container *:before,.frf-feedback-container *:after{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;image-rendering:-moz-crisp-edges;font-family:"Inter var", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Apple Color Emoji, Arial, sans-serif, Segoe UI Emoji, Segoe UI Symbol;transition:all 0.25s ease 0s}.frf-feedback-container input,.frf-feedback-container button,.frf-feedback-container textarea{font-size:inherit;font-family:inherit;-webkit-appearance:none}.frf-feedback-container textarea{resize:vertical}@media (max-width: 360){.frf-feedback-container *{font-size:12px}}
+.frf-feedback-container {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  right: 24px;
+}
+.frf-feedback-container *,
+.frf-feedback-container *:before,
+.frf-feedback-container *:after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  image-rendering: -moz-crisp-edges;
+  font-family: "Inter var", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Helvetica, Apple Color Emoji, Arial, sans-serif, Segoe UI Emoji,
+    Segoe UI Symbol;
+  transition: all 0.25s ease 0s;
+}
+.frf-feedback-container input,
+.frf-feedback-container button,
+.frf-feedback-container textarea {
+  font-size: inherit;
+  font-family: inherit;
+  -webkit-appearance: none;
+}
+.frf-feedback-container textarea {
+  resize: vertical;
+}
+@media (max-width: 360) {
+  .frf-feedback-container * {
+    font-size: 12px;
+  }
+}
 
-.frf-trigger-button{display:flex;align-items:center;justify-content:space-between;position:absolute;right:12px;bottom:24px;white-space:nowrap;cursor:pointer;box-shadow:0 20px 40px rgba(0,0,0,0.1);padding:16px 30px 16px;outline:0;border-radius:4px;border:none}.frf-trigger-button .frf-feedback-icon,.frf-trigger-button .frf-feedback-icon-open{display:flex;align-items:center}.frf-trigger-button:hover{border-color:#000}.frf-trigger-button *{font-size:16px;font-weight:500}.frf-dialog-enter{opacity:0}.frf-dialog-enter-active{-webkit-animation-name:fadeIn;animation-name:fadeIn;-webkit-animation-duration:300ms;animation-duration:300ms;opacity:1;transition:opacity 300ms}.frf-dialog-exit{opacity:1}.frf-dialog-exit-active{-webkit-animation-name:fadeOut;animation-name:fadeOut;-webkit-animation-duration:300ms;animation-duration:300ms;opacity:0.01;transition:opacity 300ms}@-webkit-keyframes fadeIn{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0px)}}@keyframes fadeIn{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0px)}}@-webkit-keyframes fadeOut{from{opacity:1;transform:translateY(0px)}to{opacity:0;transform:translateY(5px)}}@keyframes fadeOut{from{opacity:1;transform:translateY(0px)}to{opacity:0;transform:translateY(5px)}}@media (hover: hover){.frf-trigger-button{transition:opacity 0.2s 0s ease, font-size 0.2s 0.2s ease}.frf-trigger-button:hover .frf-feedback-icon:after{content:"Send Feedback";margin-left:8px;font-size:inherit;opacity:1;transition:font-size 0.2s 0s ease, opacity 0.2s 0s ease}.frf-trigger-button:hover .frf-feedback-icon-open:after{content:"Close Form";font-size:inherit;opacity:1;transition:font-size 0.2s 0s ease, opacity 0.2s 0s ease}.frf-trigger-button .frf-feedback-icon:after{content:"Send Feedback";padding-left:4px;font-size:0;opacity:0;transition:opacity 0.2s 0s ease, font-size 0.2s 0s ease}.frf-trigger-button .frf-feedback-icon-open:after{content:"Close Form";padding-left:4px;font-size:0;opacity:0;transition:opacity 0.2s 0s ease, font-size 0.2s 0s ease}}
+.frf-trigger-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  right: 12px;
+  bottom: 24px;
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  padding: 16px 30px 16px;
+  outline: 0;
+  border-radius: 4px;
+  border: none;
+}
+.frf-trigger-button .frf-feedback-icon,
+.frf-trigger-button .frf-feedback-icon-open {
+  display: flex;
+  align-items: center;
+}
+.frf-trigger-button:hover {
+  border-color: #000;
+}
+.frf-trigger-button * {
+  font-size: 16px;
+  font-weight: 500;
+}
+.frf-dialog-enter {
+  opacity: 0;
+}
+.frf-dialog-enter-active {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 300ms;
+  animation-duration: 300ms;
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.frf-dialog-exit {
+  opacity: 1;
+}
+.frf-dialog-exit-active {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+  -webkit-animation-duration: 300ms;
+  animation-duration: 300ms;
+  opacity: 0.01;
+  transition: opacity 300ms;
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+}
+@media (hover: hover) {
+  .frf-trigger-button {
+    transition: opacity 0.2s 0s ease, font-size 0.2s 0.2s ease;
+  }
+  .frf-trigger-button:hover .frf-feedback-icon:after {
+    content: "Send Feedback";
+    margin-left: 8px;
+    font-size: inherit;
+    opacity: 1;
+    transition: font-size 0.2s 0s ease, opacity 0.2s 0s ease;
+  }
+  .frf-trigger-button:hover .frf-feedback-icon-open:after {
+    content: "Close Form";
+    font-size: inherit;
+    opacity: 1;
+    transition: font-size 0.2s 0s ease, opacity 0.2s 0s ease;
+  }
+  .frf-trigger-button .frf-feedback-icon:after {
+    content: "Send Feedback";
+    padding-left: 4px;
+    font-size: 0;
+    opacity: 0;
+    transition: opacity 0.2s 0s ease, font-size 0.2s 0s ease;
+  }
+  .frf-trigger-button .frf-feedback-icon-open:after {
+    content: "Close Form";
+    padding-left: 4px;
+    font-size: 0;
+    opacity: 0;
+    transition: opacity 0.2s 0s ease, font-size 0.2s 0s ease;
+  }
+}
 
-:-ms-input-placeholder{color:rgba(110,120,152,0.6)}::-ms-input-placeholder{color:rgba(110,120,152,0.6)}::placeholder,:-ms-input-placeholder{color:rgba(110,120,152,0.6)}.frf-modal-container{display:flex;flex-direction:column;text-align:left;position:absolute;right:12px;bottom:108px;background:#fff;box-shadow:0 20px 40px rgba(0,0,0,0.1);max-width:380px;width:80%;max-height:70vh;-ms-overflow-style:none;scrollbar-width:none;overflow:scroll;border-radius:4px;font-size:16px}.frf-modal-container::-webkit-scrollbar{display:none}.frf-modal-first-row{width:100%;display:flex;justify-content:space-between;align-items:center;padding:24px;border-radius:4px 4px 0px 0px;border-bottom:1px solid rgba(110,120,152,0.15)}.frf-modal-first-row .frf-modal-title{font-weight:500}.frf-modal-first-row .frf-modal-close{font-size:14px;cursor:pointer}.frf-modal-content-container{padding:24px}.frf-modal-input-group{display:flex;flex-direction:column}.frf-modal-label{color:rgba(110,120,152,0.6);padding-bottom:8px;font-size:14px;display:inline-block;font-weight:500}textarea{min-height:140px}.frf-modal-input{padding:12px 20px;border-radius:4px;margin-bottom:12px;border:1px solid rgba(110,120,152,0.15);box-shadow:none;display:flex;align-items:center;outline:none;width:100%;font-weight:500}.frf-modal-input::-moz-placeholder{color:rgba(110,120,152,0.6);font-weight:500}.frf-modal-input:-ms-input-placeholder{color:rgba(110,120,152,0.6);font-weight:500}.frf-modal-input::-ms-input-placeholder{color:rgba(110,120,152,0.6);font-weight:500}.frf-modal-input::placeholder{color:rgba(110,120,152,0.6);font-weight:500}.frf-modal-feedback-types{width:100%;display:flex;justify-content:space-between;margin-bottom:12px}.frf-modal-feedback-types .frf-modal-feedback-type{width:100%;display:flex;justify-content:center;align-items:center;font-weight:500;overflow-wrap:anywhere;max-width:100/3;padding:12px;text-align:center;border:1px solid rgba(110,120,152,0.15);cursor:pointer}.frf-modal-feedback-types .frf-modal-feedback-type:first-of-type{border-radius:4px 0px 0px 4px}.frf-modal-feedback-types .frf-modal-feedback-type:last-of-type{border-radius:0px 4px 4px 0px}.frf-modal-button{padding:16px 30px 16px;outline:0;border-radius:4px;border:1px solid rgba(110,120,152,0.15);margin-top:16px;cursor:pointer;width:100%;font-weight:500}.frf-modal-button .frf-modal-button-loader{display:inline-block;border:2.128px solid rgba(110,120,152,0.6);border-radius:16px;width:16px;height:16px;-webkit-animation:spin 0.5s linear infinite;animation:spin 0.5s linear infinite}@media (max-width: 300px){.frf-modal-feedback-types{flex-wrap:wrap}}@-webkit-keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
-
+:-ms-input-placeholder {
+  color: rgba(110, 120, 152, 0.6);
+}
+::-ms-input-placeholder {
+  color: rgba(110, 120, 152, 0.6);
+}
+::placeholder,
+:-ms-input-placeholder {
+  color: rgba(110, 120, 152, 0.6);
+}
+.frf-modal-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  position: absolute;
+  right: 12px;
+  bottom: 108px;
+  background: #fff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  max-width: 380px;
+  width: 80%;
+  max-height: 70vh;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow: scroll;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.frf-modal-container::-webkit-scrollbar {
+  display: none;
+}
+.frf-modal-first-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  border-radius: 4px 4px 0px 0px;
+  border-bottom: 1px solid rgba(110, 120, 152, 0.15);
+}
+.frf-modal-first-row .frf-modal-title {
+  font-weight: 500;
+}
+.frf-modal-first-row .frf-modal-close {
+  font-size: 14px;
+  cursor: pointer;
+}
+.frf-modal-content-container {
+  padding: 24px;
+}
+.frf-modal-input-group {
+  display: flex;
+  flex-direction: column;
+}
+.frf-modal-label {
+  color: rgba(110, 120, 152, 0.6);
+  padding-bottom: 8px;
+  font-size: 14px;
+  display: inline-block;
+  font-weight: 500;
+}
+textarea {
+  min-height: 140px;
+}
+.frf-modal-input {
+  padding: 12px 20px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(110, 120, 152, 0.15);
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  outline: none;
+  width: 100%;
+  font-weight: 500;
+}
+.frf-modal-input::-moz-placeholder {
+  color: rgba(110, 120, 152, 0.6);
+  font-weight: 500;
+}
+.frf-modal-input:-ms-input-placeholder {
+  color: rgba(110, 120, 152, 0.6);
+  font-weight: 500;
+}
+.frf-modal-input::-ms-input-placeholder {
+  color: rgba(110, 120, 152, 0.6);
+  font-weight: 500;
+}
+.frf-modal-input::placeholder {
+  color: rgba(110, 120, 152, 0.6);
+  font-weight: 500;
+}
+.frf-modal-feedback-types {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.frf-modal-feedback-types .frf-modal-feedback-type {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+  max-width: 100/3;
+  padding: 12px;
+  text-align: center;
+  border: 1px solid rgba(110, 120, 152, 0.15);
+  cursor: pointer;
+}
+.frf-modal-feedback-types .frf-modal-feedback-type:first-of-type {
+  border-radius: 4px 0px 0px 4px;
+}
+.frf-modal-feedback-types .frf-modal-feedback-type:last-of-type {
+  border-radius: 0px 4px 4px 0px;
+}
+.frf-modal-button {
+  padding: 16px 30px 16px;
+  outline: 0;
+  border-radius: 4px;
+  border: 1px solid rgba(110, 120, 152, 0.15);
+  margin-top: 16px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 500;
+}
+.frf-modal-button .frf-modal-button-loader {
+  display: inline-block;
+  border: 2.128px solid rgba(110, 120, 152, 0.6);
+  border-radius: 16px;
+  width: 16px;
+  height: 16px;
+  -webkit-animation: spin 0.5s linear infinite;
+  animation: spin 0.5s linear infinite;
+}
+.frf-water {
+  text-align: center;
+  margin-top: 24px;
+  color: rgba(110, 120, 152, 0.6);
+  font-size: 12px;
+  font-weight: 500;
+}
+.frf-water a {
+  color: #000;
+  text-decoration: none;
+}
+.frf-water a:hover {
+  color: #005dff;
+}
+@media (max-width: 300px) {
+  .frf-modal-feedback-types {
+    flex-wrap: wrap;
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

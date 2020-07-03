@@ -1,15 +1,17 @@
 {
   "name": "feeder-react-feedback",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "Embeddable Feedback React component hooked up to an admin dashboard. The fastest way to start collecting feedback across your React projects! ⚡",
   "main": "dist/Feedback.js",
   "license": "MIT",
-  "author": "rishipr",
+  "author": "Rishi Prasad <rishipr@umich.edu>",
   "keywords": [
     "react-feedback",
-    "feedback"
+    "feedback",
+    "feeder",
+    "feedback-form"
   ],
-  "homepage": "https://feeder-admin-client.now.sh",
+  "homepage": "https://feeder.sh",
   "repository": {
     "type": "git",
     "url": "https://github.com/rishipr/feeder-react-feedback"

@@ -5,25 +5,37 @@
 
 # Feeder: feeder-react-feedback
 
-Embeddable Feedback React component hooked up to an [admin dashboard](http://feeder-admin-client.now.sh/). The fastest way to start collecting feedback across your React projects! ⚡
+![Feeder Banner](https://i.imgur.com/e56rlxF.png)
+
+Embeddable Feedback React component hooked up to an [admin dashboard](http://feeder.sh/). The fastest way to start collecting feedback across your React projects! ⚡
 
 ## Quick Links
 
 ### External
 
 - [Component Demo/Playground](http://feeder-xi.now.sh/)
-- [Admin Dashboard](http://feeder-admin-client.now.sh/)
+- [Admin Dashboard](http://feeder.sh/)
 
 ### Documentation
 
-- [Features](#features)
-- [Install via NPM](#install-via-npm)
-- [Usage](#usage)
-- [Props](#props)
-- [FAQs](#faqs)
-  - [What is the Admin Dashboard?](#what-is-the-admin-dashboard)
-  - [Usage with SSR React Frameworks (e.g. Gatsby, Next)](#will-this-work-with-ssr-react-frameworks)
-- [Tips](#tips)
+- [Feeder: feeder-react-feedback](#feeder-feeder-react-feedback)
+  - [Quick Links](#quick-links)
+    - [External](#external)
+    - [Documentation](#documentation)
+  - [Features](#features)
+  - [Install via NPM](#install-via-npm)
+  - [Usage](#usage)
+  - [Props](#props)
+  - [API](#api)
+    - [URL & Endpoint](#url--endpoint)
+    - [Create Feedback Endpoint Fields](#create-feedback-endpoint-fields)
+  - [Custom Styling](#custom-styling)
+  - [FAQs](#faqs)
+    - [What is the Admin Dashboard?](#what-is-the-admin-dashboard)
+    - [Will this work with SSR React frameworks?](#will-this-work-with-ssr-react-frameworks)
+  - [Tips](#tips)
+    - [Default Email Value](#default-email-value)
+    - [Subprojects](#subprojects)
 
 ## Features
 
@@ -31,6 +43,7 @@ Embeddable Feedback React component hooked up to an [admin dashboard](http://fee
 - **Customize Freely**: Match the component to your project's style guide and color scheme (see [props](#props) for more information)
 - **Share Projects**: Add unlimited collaborators to projects
 - **Export your Data**: Export project-specific feedback to CSV
+- **Email Notifications**: Enable project-specific email notifications that trigger every time a user submits a new piece of feedback
 
 ## Install via NPM
 
@@ -54,7 +67,7 @@ class App extends Component {
 }
 ```
 
-After importing the component, create an Account/Project on the [admin dashboard](http://feeder-admin-client.now.sh/) and pass in your project's `projectId` as a prop to the `Feedback` component.
+After importing the component, create an Account/Project on the [admin dashboard](http://feeder.sh/) and pass in your project's `projectId` as a prop to the `Feedback` component.
 
 ## Props
 
@@ -74,11 +87,55 @@ After importing the component, create an Account/Project on the [admin dashboard
 | textColor           | Text color - can accept any value that is valid for the CSS3 `color` property (hex, rgba, etc.)                                            | string           | no       | "#000000"                  |
 | zIndex              | z-index of Modal and Trigger Button                                                                                                        | string           | no       | "100000000"                |
 
+---
+
+## API
+
+If you want to render your own Feedback form/modal, but still have access to the Feeder monitoring system/admin dashboard, you can send a `POST` request to the Feeder API directly.
+
+### URL & Endpoint
+
+Send a `POST` request to Feeder's "create feedback" endpoint and make sure to pass in all required endpoint fields.
+
+- `Create Feedback Endpoint`: https://feeder-node-1337.herokuapp.com/feedback/create
+
+### Create Feedback Endpoint Fields
+
+The following should be passed as an object in the post request to `/feedback/create`. Requests without all the required fields will fail.
+
+- `projectId`: required (create an account on Feeder, create a project, and copy your projectId)
+- `feedbackMsg`: optional (but no reason not to have this!)
+- `feedbackType`: optional
+- `feedbackEmail`: optional
+- `subProject`: optional
+- `feedbackSrc`: optional
+
+## Custom Styling
+
+You can override any CSS classes in the Feedback component. Below is a list of CSS classes used in the component, but the easiest way to find specific class names and styles to override is to use the browser tools and inspect the element you are targeting.
+
+- `frf-feedback-container`: wrapper container
+- `frf-trigger-button`: main trigger button that opens up modal
+- `frf-feedback-icon-open`: trigger button icon when modal is open
+- `frf-feedback-icon`: trigger button icon when modal is closed
+- `frf-dialog`: css transition class for fade in of modal
+- `frf-modal-container`: modal content
+- `frf-modal-content-container`: form content
+- `frf-modal-input-group`: form input label + input
+- `frf-modal-label`: form input label
+- `frf-modal-input`: form input
+- `frf-modal-feedback-types`: group of feedback types
+- `frf-modal-feedback-type`: individual feedback type
+- `frf-modal-feedback-selected`: selected feedback type
+- `frf-modal-button`: main submit button
+- `frf-modal-button-loader`: loading indicator when submitted
+- `frf-water`: "Feedback powered by Feeder.sh" watermark (if you want to hide this, just target this selector and add a `display: none`)
+
 ## FAQs
 
 ### What is the Admin Dashboard?
 
-The [admin dashboard](http://feeder-admin-client.now.sh/) is where all the feedback for each project is collected. Each project has a unique id that is passed as a prop to the `<Feedback/>` component.
+The [admin dashboard](http://feeder.sh/) is where all the feedback for each project is collected. Each project has a unique id that is passed as a prop to the `<Feedback/>` component.
 
 You can add collaborators to each project as well, which will give them the ability to view all the feedback for a given project. The admin dashboard also allows users to export all project-specific data to CSV.
 
