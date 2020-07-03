@@ -87,6 +87,8 @@ class Modal extends Component {
       feedbackType,
       feedbackMsg,
       subProject,
+      feedbackSrc:
+        typeof window !== "undefined" ? window.location.pathname : null,
     };
 
     axios
@@ -258,7 +260,6 @@ class Modal extends Component {
                     borderTop: `2.133px solid ${props.textColor}`,
                   }}
                   className="frf-modal-button-loader"
-                  frf-
                 ></div>
               ) : submitted ? (
                 <span>{props.postSubmitButtonMsg}</span>
@@ -266,6 +267,16 @@ class Modal extends Component {
                 <span>{props.submitButtonMsg}</span>
               )}
             </button>
+            <div className="frf-water">
+              Feedback Powered by{" "}
+              <a
+                href="http://feeder.sh/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Feeder.sh
+              </a>
+            </div>
           </div>
         </form>
       </StyleRoot>

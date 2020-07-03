@@ -5,14 +5,16 @@
 
 # Feeder: feeder-react-feedback
 
-Embeddable Feedback React component hooked up to an [admin dashboard](http://feeder-admin-client.now.sh/). The fastest way to start collecting feedback across your React projects! ⚡
+![Feeder Banner](https://i.imgur.com/e56rlxF.png)
+
+Embeddable Feedback React component hooked up to an [admin dashboard](http://feeder.sh/). The fastest way to start collecting feedback across your React projects! ⚡
 
 ## Quick Links
 
 ### External
 
 - [Component Demo/Playground](http://feeder-xi.now.sh/)
-- [Admin Dashboard](http://feeder-admin-client.now.sh/)
+- [Admin Dashboard](http://feeder.sh/)
 
 ### Documentation
 
@@ -54,7 +56,7 @@ class App extends Component {
 }
 ```
 
-After importing the component, create an Account/Project on the [admin dashboard](http://feeder-admin-client.now.sh/) and pass in your project's `projectId` as a prop to the `Feedback` component.
+After importing the component, create an Account/Project on the [admin dashboard](http://feeder.sh/) and pass in your project's `projectId` as a prop to the `Feedback` component.
 
 ## Props
 
@@ -78,7 +80,7 @@ After importing the component, create an Account/Project on the [admin dashboard
 
 ### What is the Admin Dashboard?
 
-The [admin dashboard](http://feeder-admin-client.now.sh/) is where all the feedback for each project is collected. Each project has a unique id that is passed as a prop to the `<Feedback/>` component.
+The [admin dashboard](http://feeder.sh/) is where all the feedback for each project is collected. Each project has a unique id that is passed as a prop to the `<Feedback/>` component.
 
 You can add collaborators to each project as well, which will give them the ability to view all the feedback for a given project. The admin dashboard also allows users to export all project-specific data to CSV.
 

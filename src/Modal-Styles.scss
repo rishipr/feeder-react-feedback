@@ -136,6 +136,23 @@ textarea {
   }
 }
 
+.frf-water {
+  text-align: center;
+  margin-top: 24px;
+  color: $lightGray;
+  font-size: 12px;
+  font-weight: 500;
+
+  a {
+    color: $black;
+    text-decoration: none;
+
+    &:hover {
+      color: $primaryBlue;
+    }
+  }
+}
+
 @media (max-width: 300px) {
   .frf-modal-feedback-types {
     flex-wrap: wrap;

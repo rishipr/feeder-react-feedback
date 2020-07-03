@@ -2,6 +2,7 @@
 /node_modules
 /.pnp
 .pnp.js
+/demo
 
 # testing
 /coverage
