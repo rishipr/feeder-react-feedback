@@ -21,7 +21,7 @@
     "build": "webpack"
   },
   "peerDependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "radium": "^0.26.0",
     "prop-types": "^15.6.0",
     "react": "^16.13.1",
@@ -32,7 +32,7 @@
   "devDependencies": {
     "@svgr/webpack": "^5.4.0",
     "autoprefixer": "^9.8.4",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "babel-core": "^6.21.0",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
